@@ -26,7 +26,7 @@ A microservice project following Amichai Mantinband's series on Clean Architectu
 ```
 dotnet run --project .\BuberDinner.Api\
 ```
-
+(but )
 or
 
 ```
@@ -34,3 +34,9 @@ docker-compose up -d --build
 ```
 
 if you have docker installed
+
+before actually using, populate your database with tables:
+
+```
+dotnet ef database update -p BuberDinner.Infrastructure -s BuberDinner.Api --connection "Server=localhost; Database=BuberDinner; User Id=sa; Password=password;Encrypt=false"
+```
