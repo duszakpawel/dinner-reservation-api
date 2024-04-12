@@ -16,6 +16,10 @@ A microservice project following Amichai Mantinband's series on Clean Architectu
 # Stack
 
  - .NET 8 with EF Core (sql lite provider)
+ - ErrorOr
+ - FluentValidation
+ - Mapster
+ - MediatR
 
 ## Guide
 
