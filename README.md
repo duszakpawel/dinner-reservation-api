@@ -35,8 +35,11 @@ docker-compose up -d --build
 
 if you have docker installed
 
-before actually using, populate your database with tables:
-
+before actually using, create your sql server and populate your database with tables:
 ```
+docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+docker run -d 'HOMEBREW_NO_ENV_FILTERING=1'  -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=password' -p 1433:1433 -d %mcr.microsoft.com/mssql/server:2022-latest
+
 dotnet ef database update -p BuberDinner.Infrastructure -s BuberDinner.Api --connection "Server=localhost; Database=BuberDinner; User Id=sa; Password=password;Encrypt=false"
 ```
