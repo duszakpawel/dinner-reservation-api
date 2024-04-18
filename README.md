@@ -26,7 +26,6 @@ A microservice project following Amichai Mantinband's series on Clean Architectu
 ```
 dotnet run --project .\BuberDinner.Api\
 ```
-(but )
 or
 
 ```
